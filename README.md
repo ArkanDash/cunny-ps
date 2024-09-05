@@ -87,6 +87,8 @@ mitmweb -m wireguard --no-http2 -s redirect_server.py --set termlog_verbosity=wa
 
 # Last Steps [Checking]
 > [!CAUTION]  
-> Make sure mitmweb cmd, SCHALE.GameServer cmd, and Wireguard connection is on.
+> Make sure mitmproxy cmd, SCHALE.GameServer cmd, and Wireguard connection is on.
 1. Play the game
 
+# References
+- [Install System CA Certificate on Android Emulator](https://docs.mitmproxy.org/stable/howto-install-system-trusted-ca-android/)
