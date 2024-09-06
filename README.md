@@ -1,6 +1,7 @@
 # Prerequisites
 - LDPlayer
 - Git
+- .NET SDK 8.0
 - SQL Server Express 2022
 - SSMS (SQL Server Management Studio 20)
 - mitmproxy
