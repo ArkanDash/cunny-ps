@@ -1,4 +1,8 @@
-# Prerequisites
+# MITM Method
+
+Frida method doesn't work so I create this tutorial to setup the server.
+
+## Prerequisites
 - LDPlayer
 - Git
 - .NET SDK 8.0
@@ -12,13 +16,13 @@
 > [!CAUTION]  
 > **Make sure you've done the tutorial and have downloaded all the data**
 
-# Steps 1 [Setup LDPlayer]
+## Steps 1 [Setup LDPlayer]
 1. Make the emulator writeable system, enable root and enable local connection for ADB
 ![image](https://github.com/user-attachments/assets/23160474-3021-4532-9e51-a8adac4e2e02)
 ![image](https://github.com/user-attachments/assets/f1db6845-df2e-4844-9deb-e0b2ca406bbb)
 2. Restart the emulator
 
-# Steps 2 [Create System CA]
+## Steps 2 [Create System CA]
 1. Go to `C:\Users\<YOUR USER ACCOUNT>\.mitmproxy` and git bash
 
 ![image](https://github.com/user-attachments/assets/956d9c68-647f-4b71-a266-5b716d1005f9)
@@ -32,7 +36,7 @@ hashed_name=`openssl x509 -inform PEM -subject_hash_old -in mitmproxy-ca-cert.ce
 ![image](https://github.com/user-attachments/assets/7fa05b59-5362-45c9-a49e-dcdf568097dd)
 
 4. Copy that `[8-character alphanumeric].0` into LDPlayer folder
-# Steps 3 [Applied CA to Emulator]
+## Steps 3 [Applied CA to Emulator]
 1. Open cmd from LDPlayer folder that contains both `[8-character alphanumeric].0` and `adb.exe`
 2. Run the following commands in sequence
 ```bash
@@ -43,7 +47,7 @@ adb shell chmod 664 /system/etc/security/cacerts/<8-character alphanumeric.0>
 ```
 3. Restart the emulator
 
-# Steps 4 [Setting up Mitmproxy] 
+## Steps 4 [Setting up Mitmproxy] 
 1. Open cmd and type `ipconfig`
 2. Find "IPv4 Address" and copy the Address (You can close this cmd)
 
@@ -69,24 +73,27 @@ mitmweb -m wireguard --no-http2 -s redirect_server.py --set termlog_verbosity=wa
 ```
 7. Wait and it will pop up an new tab contains mitmproxy with QR Code (used for later)
 
-# Steps 5 [Setting up Wireguard]
+## Steps 5 [Setting up Wireguard]
 1. Open Wireguard on your Emulator.
 2. Scan the QR Code using Wireguard.
 3. Name the wireguard connection whatever you want.
 4. Enable the connection.
 
-# Steps 6 [Setting up SCHALE.GameServer]
+## Steps 6 [Setting up SCHALE.GameServer]
 1. Go to `SCHALE.GameServer/SCHALE.GameServer`
 2. Open cmd on this current folder
 3. Type `dotnet run`
 4. Wait until its listening to `0.0.0.0`
 
-# Steps 7 [Setting Up SQL Server Management Studio (SSMS)]
+## Steps 7 [Setting Up SQL Server Management Studio (SSMS)]
+
+I think you can skip this part.
+
 1. Open SSMS
 2. Check the `Trust Server Certificate`
 3. Connect and close the SSMS
 
-# Last Steps [Checking]
+## Last Steps [Checking]
 > [!CAUTION]  
 > Make sure mitmproxy cmd, SCHALE.GameServer cmd, and Wireguard connection is on.
 1. Play the game
