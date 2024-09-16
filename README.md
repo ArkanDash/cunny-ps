@@ -3,15 +3,15 @@
 Frida method doesn't work so I create this tutorial to setup the server.
 
 ## Prerequisites
-- LDPlayer
-- Git
-- .NET SDK 8.0
-- SQL Server Express 2022
-- SSMS (SQL Server Management Studio 20)
-- mitmproxy
+- [LDPlayer](https://www.ldplayer.net/)
+- [Git](https://git-scm.com/)
+- [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
+- [SQL Server Express 2022](https://www.microsoft.com/en-us/download/details.aspx?id=104781)
+- [SSMS (SQL Server Management Studio 20)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16#download-ssms)
+- [mitmproxy](https://mitmproxy.org/)
 - WireGuard
 - Blue Archive JP
-- SCHALE.GameServer
+- [SCHALE.GameServer](https://github.com/Endergreen12/SCHALE.GameServer)
 
 > [!CAUTION]  
 > **Make sure you've done the tutorial and have downloaded all the data**
