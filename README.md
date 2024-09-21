@@ -85,14 +85,6 @@ mitmweb -m wireguard --no-http2 -s redirect_server.py --set termlog_verbosity=wa
 3. Type `dotnet run`
 4. Wait until its listening to `0.0.0.0`
 
-## Steps 7 [Setting Up SQL Server Management Studio (SSMS)]
-
-I think you can skip this part.
-
-1. Open SSMS
-2. Check the `Trust Server Certificate`
-3. Connect and close the SSMS
-
 ## Last Steps [Checking]
 > [!CAUTION]  
 > Make sure mitmproxy cmd, SCHALE.GameServer cmd, and Wireguard connection is on.
